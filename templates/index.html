@@ -16,7 +16,7 @@
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
             <!-- Add a button to activte scraping script-->
-            <p><a class="btn btn-primary ptn-lg" href="/scrape" role="button">Scrape New data</a></p>
+            <p><a class="btn btn-info ptn-lg" href="/scrape" role="button">Scrape New data</a></p>
         </div>
         <!-- Add secttion for Mars News-->
         <div class="row" id='mars-news'>
@@ -40,7 +40,14 @@
                 <img src="{{ mars.featured_image }}" 
                     class="img-responsive" 
                     alt="Responsive image"/>
-            </div>
+                </div>
+        <div class="row" id='mars-hemisphere'>
+            </div>class="col-md-8">
+                <h2>Mars Hemisphere Images</h2>
+        <img src="{{% for hemisphere in mars.hemispheres %}}" 
+            class="img-thumbnail" 
+            alt="Responsive image"/>
+        </div>
             <div class="col-md-4">
                 <!-- Mars Facts -->
                 <div class="row" id="mars-facts">
